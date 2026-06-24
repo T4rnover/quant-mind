@@ -107,7 +107,7 @@ We use [uv](https://github.com/astral-sh/uv) for fast and reliable Python packag
 
 **Prerequisites:**
 
-- Python 3.8+
+- Python 3.10+
 - Git
 
 **Installation:**
@@ -151,6 +151,23 @@ We use [uv](https://github.com/astral-sh/uv) for fast and reliable Python packag
    ```bash
    uv pip install -e .
    ```
+
+5. **Configure environment variables (required for OpenAI-backed flows):**
+
+  ```bash
+  cp .env.example .env
+  # Then edit .env and set OPENAI_API_KEY
+  ```
+
+  For one-off shell usage:
+
+  ```bash
+  export OPENAI_API_KEY="your_openai_api_key_here"
+  ```
+
+> [!IMPORTANT]
+> The `paper_flow` examples below use OpenAI models (for example,
+> `gpt-4o-mini`), so `OPENAI_API_KEY` must be set in your environment.
 
 ### 📚 Usage Examples
 
